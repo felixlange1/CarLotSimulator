@@ -18,6 +18,44 @@ namespace CarLotSimulator
             //Set the properties for each of the cars
             //Call each of the methods for each car
 
+            var cars = new CarLot();
+            
+            // Object Initializer Sntax:
+            Car FirstCar = new Car()
+            {
+                Make = "BMW",
+                Model = "M4",
+                Year = 2021,
+                EngineNoise = "loud",
+                HonkNoise = "loud",
+                IsDriveable = true,
+            };
+            FirstCar.MakeEngineNoise(FirstCar.EngineNoise);
+            FirstCar.MakeHonkNoise(FirstCar.HonkNoise);
+            
+            cars.Cars.Add(FirstCar);
+            
+            // Dot Notation:
+            Car SecondCar = new Car();
+            SecondCar.Make = "Audi";
+            SecondCar.Model = "A3";
+            SecondCar.Year = 2018;
+            SecondCar.EngineNoise = "medium";
+            SecondCar.HonkNoise = "low";
+            SecondCar.IsDriveable = true;
+            
+            SecondCar.MakeEngineNoise(SecondCar.EngineNoise);
+            SecondCar.MakeHonkNoise(SecondCar.HonkNoise);
+            
+            cars.Cars.Add(SecondCar);
+            
+            // Custom Constructor:
+            var ThirdCar = new Car("For", "Mustang", 1969, "loud", "low", false);
+            ThirdCar.MakeEngineNoise(ThirdCar.EngineNoise);
+            ThirdCar.MakeHonkNoise(ThirdCar.HonkNoise);
+            
+            cars.Cars.Add(ThirdCar);
+
             //*************BONUS*************//
 
             // Set the properties utilizing the 3 different ways we learned about, one way for each car
@@ -28,6 +66,10 @@ namespace CarLotSimulator
             //It should have at least one property: a List of cars
             //Instanciate the a Carlot at the beginning of the program and as you create a car add the car to the list.
             //At the end iterate through the list printing each of car's Year, Make, and Model to the console
+            
+            cars.Inventory();
+
+
         }
     }
 }
