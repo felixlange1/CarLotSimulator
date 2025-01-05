@@ -34,6 +34,7 @@ namespace CarLotSimulator
             FirstCar.MakeHonkNoise(FirstCar.HonkNoise);
             
             cars.Cars.Add(FirstCar);
+            Console.WriteLine($"Number of cars on lot: {CarLot._numberofCars}");
             
             // Dot Notation:
             Car SecondCar = new Car();
@@ -48,6 +49,8 @@ namespace CarLotSimulator
             SecondCar.MakeHonkNoise(SecondCar.HonkNoise);
             
             cars.Cars.Add(SecondCar);
+           
+            Console.WriteLine($"Number of cars on lot: {CarLot._numberofCars}");
             
             // Custom Constructor:
             var ThirdCar = new Car("For", "Mustang", 1969, "loud", "low", false);
@@ -55,6 +58,8 @@ namespace CarLotSimulator
             ThirdCar.MakeHonkNoise(ThirdCar.HonkNoise);
             
             cars.Cars.Add(ThirdCar);
+          
+            Console.WriteLine($"Number of cars on lot: {CarLot._numberofCars}");
 
             //*************BONUS*************//
 
@@ -68,6 +73,8 @@ namespace CarLotSimulator
             //At the end iterate through the list printing each of car's Year, Make, and Model to the console
             
             cars.Inventory();
+            
+            
 
 
         }

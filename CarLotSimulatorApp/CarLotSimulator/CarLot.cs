@@ -14,4 +14,6 @@ public class CarLot
             Console.WriteLine($"Make: {car.Make}, Model: {car.Model}, Year: {car.Year}");
         }
     }
+
+    public static int _numberofCars;
 }
